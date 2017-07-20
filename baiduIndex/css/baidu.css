@@ -1,0 +1,944 @@
+body {
+    font: 12px arial;
+    margin: 0;
+}
+/* 页面稳定 start */
+.mobile-wrapper {
+    display: none;
+}
+
+html,body,.pc-wrapper {
+    margin: 0;
+    height: 100%;
+}
+
+.pc-wrapper {
+    min-height: 600px;
+    min-width: 810px;
+    position: relative;
+}
+/* 页面稳定 end */
+/*头部信息*/
+
+header {
+    overflow: hidden;
+}
+
+header .head-body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 590px;
+    font-size: 13px;
+    text-align: right;
+    color: #999;
+    color: #999\0;
+    line-height: 32px;
+}
+
+header .head-body>a {
+    margin-left: 18px;
+    font-weight: bold;
+    color: #555;
+    height: 32px;
+    display: inline-block;
+}
+
+header .head-body>a:hover {
+    color: #00c;
+    color: #00c\0;
+}
+/*upfunc start*/
+.s-upfunc-menus {
+    position: absolute;
+    left: -675px;
+    top: 0;
+    z-index: 100;
+    height: 32px;
+    padding-right: 15px;
+}
+.s-upfunc-menus .s-icons {
+    float: left;
+}
+.s-upfunc-menus .s-icons a {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 19px;
+    color: #555;
+    text-decoration: underline;
+    outline: none;
+    display: inline-block;
+    text-shadow: none
+}
+/*upfunc end*/
+
+/*weather*/
+
+.s-weather-wrapper {
+    float: left;
+    height: 34px
+}
+
+.s-weather-wrapper .hide-weater .weather-mod {
+    _display: none
+}
+
+.s-upfunc-menus .s-weather-null {
+    min-width: 15px
+}
+/**/
+.s-mod-weather {
+    margin: 7px 0 0 15px;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    _margin: 6px 0 0 7px
+}
+
+.s-mod-weather.no-polution-ie6 {
+    _display: inline
+}
+
+.s-mod-weather a {
+    outline: none;
+    text-decoration: none
+}
+
+.s-mod-weather .weather-bg {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    height: 35px;
+    z-index: -1
+}
+/**/
+.s-mod-weather .weather-mod {
+    height: auto
+}
+
+.s-mod-weather a.weather-mod-link {
+    display: inline-block;
+    height: 100%
+}
+
+.hide-weater .city-wather {
+    display: none
+}
+
+.hide-unknow-city .unknown-city {
+    display: none
+}
+
+.city-wather {
+    display: block;
+    cursor: pointer;
+    height: 20px;
+    white-space: nowrap;
+    _text-align: left;
+    _display: inline
+}
+/**/
+.s-mod-weather .show-weather,.s-mod-weather .show-pollution {
+    display: inline-block;
+    height: 20px;
+    *display: inline
+}
+
+.s-mod-weather .hide-pollution {
+    display: none
+}
+/**/
+.s-mod-weather .show-vertical {
+    margin-right: 11px
+}
+
+.s-mod-weather .show-airParm em {
+    line-height: 20px\9;
+    vertical-align: bottom\9
+}
+
+.s-mod-weather .polution-level-0 .show-polution-name {
+    color: #38f;
+    font-weight: bold
+}
+/**/
+.s-mod-weather .polution-level-10 .show-polution-name,.s-mod-weather .polution-level-20 .show-polution-name {
+    color: #badc00;
+    font-weight: bold
+}
+
+.s-mod-weather .polution-level-30 .show-polution-name {
+    color: #fea700;
+    font-weight: bold
+}
+
+.s-mod-weather .polution-level-40 .show-polution-name {
+    color: #ff7e00;
+    font-weight: bold
+}
+
+.s-mod-weather .polution-level-50 .show-polution-name {
+    color: #f03b32;
+    font-weight: bold
+}
+
+.s-mod-weather .show-polution-num {
+    margin-right: 7px;
+    margin-left: 0
+}
+/**/
+.s-mod-weather .show-icon {
+    margin-right: 9px
+}
+
+.s-mod-weather .show-weather img {
+    margin-right: 7px
+}
+
+.s-mod-weather span {
+    display: inline-block;
+    height: 20px;
+    vertical-align: bottom
+}
+
+.s-mod-weather .show-weather img,.s-mod-weather .show-weather em,.s-mod-weather .show-pollution em {
+    vertical-align: top
+}
+/**/
+.s-mod-weather .show-pollution em {
+    margin-right: 7px;
+    font-style: normal;
+}
+/**/
+.s-mod-weather .show-weather em,.s-mod-weather .show-polution-num {
+    line-height: 20px;
+    font-style: normal;
+}
+/**/
+.s-mod-weather .show-city em {
+    line-height: 20px
+}
+/**/
+.s-mod-weather .show-icon .weather-icon,.s-mod-weather .show-icon .show-icon-temp {
+    *vertical-align: middle
+}
+/**/
+.s-mod-weather .show-icon .weather-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    background-image: url('../img/a0.jpg');
+    background-size: 18px;
+}
+
+/**/
+.s-mod-weather a,.s-mod-weather em,.s-mod-weather span {
+    color: #adacac
+}
+/**/
+.s-mod-weather .unknown-city {
+    height: 20px;
+    line-height: 19px;
+    width: 160px;
+    text-align: left;
+    margin-right: 10px
+}
+/**/
+.s-mod-weather .unknown-city span {
+    display: inline-block
+}
+
+.show-pollution {
+    vertical-align: bottom
+}
+/**/
+.s-mod-weather .unknown-text,.unknown-city,.city-wather a,.city-wather em,.city-wather span,.show-pollution a,.show-pollution em,.show-pollution span {
+    color: #555
+}
+
+.s-mod-weather .unknown-setting {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0079f5
+}
+
+.s-mod-weather .s-mod-weather-bear {
+    width: 174px;
+    height: 115px;
+    position: absolute;
+    top: 30px;
+    left: 11px;
+    display: none
+}
+
+.s-mod-weather-bear .weather-bear-body {
+    width: 178px;
+    height: 159px
+}
+
+.s-mod-weather-bear .weather-bear-close {
+    position: absolute;
+    top: 6px;
+    right: 9px;
+    width: 16px;
+    height: 16px
+}
+
+.s-mod-weather .bear-50,.s-mod-weather .bear-40,.s-mod-weather .bear-30,.s-mod-weather .bear-20 {
+    display: block
+}
+
+.s-skin-hasbg .s-mod-weather .unknown-text {
+    color: #fff
+}
+
+.s-skin-hasbg .s-mod-weather .unknown-setting {
+    color: #8bc5ff
+}
+
+.s-skin-hasbg .weather-setting-content {
+    border: none
+}
+
+.s-show-skin .weather-setting-content {
+    border: 1px solid #e3e3e3
+}
+
+/*show-content*/
+/**/
+.s-mod-setweather {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 585px;
+    z-index: 500;
+    display: none
+}
+/**/
+.s-mod-setweather.hide {
+    display: none
+}
+/**/
+.s-mod-setweather.show {
+    display: block
+}
+
+.weather-setting-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 585px;
+    height: 201px
+}
+
+.show-warning .weather-setting-shadow {
+    height: 239px
+}
+
+.weather-setting-arraw {
+    position: absolute;
+    top: -5px;
+    left: 67px;
+    height: 6px;
+    width: 11px;
+    background: url("../img/load_ext_spis.png") no-repeat -20px -90px
+}
+
+.weather-setting-content {
+    position: relative;
+    width: 585px;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    box-shadow: 1px 2px 1px 0 rgba(0,0,0,0.072);
+    -moz-box-shadow: 1px 2px 1px 0 rgba(0,0,0,0.072);
+    -webkit-box-shadow: 1px 2px 1px 0 rgba(0,0,0,0.072);
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#e3e3e3');
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#e3e3e3')"
+}
+
+.show-warning .weather-setting-content {
+    height: 239px
+}
+/**/
+.hide-warning .weather-setting-content,.show-setting .weather-setting-content {
+    height: 201px
+}
+
+.hide-warning .warn-mod,.hide-warning .warn-icon-link {
+    display: none
+}
+
+.show-content .setweather-setting {
+    display: none
+}
+
+.show-setting .setweather-content,.show-setting .warn-icon-link {
+    display: none;
+    *filter: none
+}
+
+.s-mod-setweather .warn-mod {
+    height: 37px;
+    width: 100%;
+    background: #f2f2f2;
+    line-height: 37px
+}
+
+.s-mod-setweather .warn-img-bg {
+    float: left;
+    width: 53px;
+    height: 100%
+}
+
+.s-mod-setweather .warn-title {
+    float: left;
+    line-height: 37px;
+    margin-left: 11px;
+    font-size: 12px;
+    color: #333;
+    text-align: left
+}
+
+.s-mod-setweather .warn-title:hover {
+    text-decoration: none
+}
+
+.s-mod-setweather .warn-img-icon {
+    margin: 7px 14px;
+    width: 24px;
+    height: 24px
+}
+
+.warn-icon-link {
+    position: absolute;
+    top: 7px;
+    left: 14px;
+    width: 24px;
+    height: 24px;
+    display: inline-block
+}
+
+.s-mod-setweather .lunar-mod {
+    height: 40px;
+    width: 547px;
+    margin: 0 19px;
+    border-bottom: #efefef 1px solid
+}
+
+.s-mod-setweather .lunar-mod span {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    font-size: 12px;
+    float: left
+}
+
+.s-mod-setweather .lunar-calendar {
+    color: #666
+}
+
+.s-mod-setweather .lunar-festival {
+    color: #999;
+    margin-left: 6px
+}
+
+.s-mod-setweather .lunar-sevenday {
+    margin-left: 18px
+}
+
+.s-mod-setweather .lunar-sevenday a {
+    color: #0079f4
+}
+
+.s-mod-setweather .lunar-sevenday a:hover {
+    text-decoration: underline
+}
+
+.s-mod-setweather .lunar-mod .lunar-setting-btn {
+    float: right;
+    color: #666;
+    width: 40px;
+    cursor: pointer;
+    text-align: right;
+    line-height: 40px;
+    background: url("../img/load_ext_spis.png") no-repeat -36px -88px;
+    background-position: -36px -89px !important;
+}
+
+.s-mod-setweather .lunar-mod .hover-setting-btn {
+    background-position: -36px -122px !important;
+    color: #0079f5
+}
+
+.s-mod-setweather .everyday-item {
+    text-align: center;
+    float: left;
+    width: 105px;
+    overflow: hidden
+}
+
+.s-mod-setweather .everyday-item.is-today {
+    width: 161px
+}
+
+.s-mod-setweather .everyday-item p {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+    font-size: 12px;
+    margin:0;
+}
+
+.s-mod-setweather .everyday-item.is-today p {
+    font-weight: bold
+}
+
+.s-mod-setweather .everyday-title {
+    height: 34px;
+    line-height: 34px;
+    width: 100%
+}
+
+.s-mod-setweather .everyday-link .sunshine {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 4px;
+    border: none;
+    background: url('../img/a0.jpg?__sprite');
+}
+
+.s-mod-setweather .everyday-link .cloudy {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 4px;
+    border: none;
+    background: url('../img/a1.jpg?__sprite');
+}
+
+.s-mod-setweather .everyday-temp,.s-mod-setweather .everyday-condition,.s-mod-setweather .everyday-wind {
+    height: 18px;
+    line-height: 18px
+}
+
+.s-mod-setweather .everyday-link:hover .everyday-temp,.s-mod-setweather .everyday-link:hover .everyday-condition,.s-mod-setweather .everyday-link:hover .everyday-wind,.s-mod-setweather .everyday-link:hover .everyday-title {
+    cursor: pointer;
+    color: #0079f5;
+    text-decoration: none
+}
+
+.s-mod-setweather .setting-city-title {
+    height: 41px;
+    line-height: 41px;
+    font-size: 12px;
+    color: #666;
+    margin-left: 20px;
+    text-align: left
+}
+
+.s-mod-setweather .setting-city-select {
+    margin-left: 20px;
+    text-align: left
+}
+
+.s-mod-setweather .setting-city-select select {
+    width: 120px;
+    margin: 0 12px 0 0
+}
+
+.s-mod-setweather .setting-extreme-weather {
+    margin-left: 20px;
+    height: 67px;
+    line-height: 67px;
+    font-size: 12px;
+    color: #666;
+    text-align: left
+}
+
+.s-mod-setweather .setting-extreme-weather input {
+    *display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-top: -4px;
+    *margin-top: -2px;
+    cursor: pointer
+}
+
+.s-mod-setweather .setting-extreme-weather span {
+    display: inline;
+    *display: inline-block;
+    color: #aaa;
+    margin-left: 10px;
+    *margin-bottom: 48px;
+    _margin-bottom: 0
+}
+
+.s-mod-setweather .setting-extreme-weather label {
+    *display: inline-block
+}
+
+.s-mod-setweather .setting-save-or-cancel {
+    width: 547px;
+    margin: 0 19px;
+    text-align: left;
+    border-top: 1px solid #efefef
+}
+
+.s-mod-setweather .setting-save-or-cancel a {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 12px;
+    text-align: center;
+    width: 54px;
+    height: 26px;
+    margin-top: 17px;
+    line-height: 26px;
+    background: url("../img/load_ext_spis.png") no-repeat 1000px 1000px
+}
+
+.s-mod-setweather .setting-save-or-cancel .setting-save {
+    background-position: 0 -30px;
+    color: #fff
+}
+
+.s-mod-setweather .setting-save-or-cancel .setting-save:hover {
+    background-position: 0 0
+}
+
+.s-mod-setweather .setting-save-or-cancel .setting-cancel {
+    color: #666;
+    background-position: 0 -60px
+}
+/*/show content*/
+/*weather*/
+
+/*skin start*/
+/*.s-skin-layer-shadow {*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*z-index: 1112;*/
+/*}*/
+.s-skin-layer {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    z-index: 1113;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+    -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+}
+/*skin end*/
+#s_user_name_menu {
+    right: 132px;
+    display:none;
+}
+#s_user_setting_menu {
+    top: 26px;
+    display:none;
+}
+
+#s_user_name_menu.s-user-set-menu a,#s_user_setting_menu.s-user-set-menu a {
+    text-shadow: none;
+    color: #000
+}
+
+#s_user_name_menu.s-user-set-menu a:hover,#s_user_setting_menu.s-user-set-menu a:hover {
+    background: #38F;
+    color: #FFF;
+    text-decoration: none
+}
+
+.s-user-set-menu div {
+    position: relative;
+    border: 1px solid #E3E3E3;
+    box-shadow: 1px 1px 5px #d1d1d1;
+    -moz-box-shadow: 1px 1px 5px #d1d1d1;
+    -webkit-box-shadow: 1px 1px 5px #d1d1d1
+}
+
+.s-user-set-menu.menu-top {
+    width: 70px
+}
+
+.s-user-set-menu {
+    padding-top: 6px;
+    top: 26px;
+    position: absolute;
+    right: 75px;
+    *right: 73px;
+    float: right;
+    width: 100px;
+    z-index: 999;
+    text-align: left;
+}
+
+.s-user-set-menu a {
+    text-decoration: none;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 8px;
+    background-color: #fff;
+    -moz-user-select: none;
+    cursor: pointer;
+    text-align: left;
+    display: block;
+    color: #333;
+    margin: 0;
+    font-size: 12px
+}
+
+.s-sp-menu a {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 19px;
+    color: #555;
+    text-decoration: underline;
+    outline: none;
+    display: inline-block;
+    text-shadow: none
+}
+
+.s-user-set-menu.menu-top .menu-arrow {
+    float: right;
+    right: 32px
+}
+.s-user-set-menu .menu-arrow {
+    position: absolute;
+    z-index: 2;
+    top: -4px;
+    left: 28px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 5px dashed transparent;
+    border-bottom: 5px solid #e3e3e3;
+    font-size: 0
+}
+/*更多产品*/
+#moreProduct {
+    width: 86px;
+    height: 32px;
+    line-height: 32px;
+    color: white;
+    color: white\0;
+    background: #398bfb;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid #398bfb;
+    text-decoration: none;
+    display:block;
+    float: right;
+}
+
+#mrpdt {
+    float: right;
+    margin-left: 16px;
+}
+/* hidden div */
+.bdbriimg{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    width: 85px;
+    min-height: 600px;
+    border-left: 1px solid #e7e7e7;
+    background-color: #f9f9f9;
+    background-color: #f9f9f9\0;
+    overflow: hidden;
+    text-shadow: none;
+}
+
+
+#bdbriimgtitle {
+    color: #333;
+    text-align: center;
+    width: 66px;
+    height: 30px;
+    line-height: 34px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    font-size: 13px;
+    cursor: default;
+}
+
+#bdbriwrapper a {
+    display: block;
+    text-align: center;
+    width: 66px;
+    height: 76px;
+    margin: 0 auto;
+    font-size: 12px;
+    border-bottom: #f0f0f0 1px solid;
+    color: #666;
+    color: #666\0;
+    text-decoration: none;
+    overflow: hidden;
+    text-shadow: none;
+    line-height: 14px;
+}
+
+#bdbriwrapper a img {
+    display: block;
+    height: 36px;
+    width: auto;
+    margin: 10px auto 5px;
+    cursor: pointer;
+}
+/* hidden div end */
+#top-wrap {
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb;
+    min-width: 1000px;
+    width: 100%;
+    height: 32px;
+    position: absolute;
+    top:0;
+}
+/*主体部分*/
+
+.content {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -279px;
+    text-align: center;
+}
+
+.content img {
+    width: 270px;
+    height: 129px;
+}
+
+.content form {
+    margin-top: 25px;
+}
+
+#s_kw_wrap {
+    position: relative;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: top;
+    text-align: left;
+}
+
+.ipt_rec {
+    display: block;
+    top: 3px;
+    right: 41px!important;
+    left: initial;
+    z-index: 1;
+    position: absolute;
+    height: 34px;
+    width: 24px;
+    background: url(../img/microphone.png) no-repeat center;
+    background-size: 13px 18px;
+    background-position: 0 50%;
+    cursor: pointer;
+}
+
+
+.soutu_btn {
+    z-index: 1;
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    margin-top: -8px;
+    height: 16px;
+    width: 18px;
+    background: #fff url(../img/camera.png) no-repeat;
+    cursor: pointer;
+
+}
+
+.soutu_btn:hover {
+    background-position: 0 -20px;
+}
+
+.content input {
+    padding: 3px 7px;
+    width: 450px;
+    height: 40px;
+    border: 1px solid #b8b8b8;
+    font-size: 16px;
+    margin-right: -2px;
+    padding-right: 78px!important;
+    outline: 0;
+}
+
+.content input:hover {
+    border: 1px solid #a5a5a5;
+}
+
+.content input:focus {
+    border: 1px #38f solid;
+} 
+
+.content button {
+    width: 102px;
+    height: 40px;
+    background-color: #38f;
+    color: white;
+    border: 0px;
+    font-size: 16px;
+    box-shadow: none;
+    margin-left: -2px;
+}
+
+.content button:hover {
+    width: 102px;
+    height: 40px;
+    line-height: 38px;
+    background-color: #317ef3;
+    color: white;
+    border: 0px;
+    border-bottom: 1px solid #2868c8;
+    font-size: 18px;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+
+/*底部信息*/
+
+footer {
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    bottom: 12px;
+    overflow: hidden;
+    color: #999;
+    zoom: 1;
+    margin: 0;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer p * {
+    font-size:12px;
+    color: #999;
+}
+
+footer p img {
+    width: 16px;
+    height: 16px;
+}
