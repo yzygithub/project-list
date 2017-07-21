@@ -1,0 +1,275 @@
+@charset "utf-8";
+body {
+    background-color: #f4f4f4
+}
+
+.register-header {
+    background-color: #fff
+}
+
+.register-header-content {
+    width: 1024px;
+    margin: 0 auto
+}
+
+.register-header .logo {
+    margin-top: 5px;
+    margin-left: 40px;
+    width: 300px;
+    height: 60px;
+    border: 0
+}
+
+.register-header .logout {
+    float: right;
+    line-height: 60px;
+    margin-right: 43px;
+    color: #00a9d3;
+    font-size: 14px
+}
+
+.register-process,.register-content {
+    width: 940px;
+    margin: 0 auto
+}
+
+.register-process li {
+    float: left;
+    position: relative;
+    width: 313px;
+    height: 36px;
+    line-height: 36px;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #ddd
+}
+
+.register-process li:not(:last-child):before {
+    position: absolute;
+    z-index: 3;
+    content: '';
+    right: -20px;
+    bottom: 0;
+    border-left: 18px dashed #fff;
+    border-top: 18px dashed transparent;
+    border-bottom: 18px dashed transparent
+}
+
+.register-process li:not(:last-child):after {
+    position: absolute;
+    z-index: 4;
+    content: '';
+    right: -18px;
+    bottom: 0;
+    border-left: 18px dashed #ddd;
+    border-top: 18px dashed transparent;
+    border-bottom: 18px dashed transparent
+}
+
+.register-process li.active:not(:last-child):after {
+    border-left-color: #46b8da
+}
+
+.register-process li b {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 15px;
+    font-weight: normal;
+    border-radius: 50%;
+    color: #4d4d4e;
+    background-color: #fff
+}
+
+.register-process li.active {
+    background-color: #46b8da;
+    color: #fff
+}
+
+.register-content {
+    padding: 0 20px;
+    background-color: #fff
+}
+
+.register-title {
+    line-height: 25px;
+    padding: 8px 0 5px;
+    color: #4d4d4e;
+    font-size: 18px;
+    border-bottom: 1px solid #c9c9ca
+}
+
+.register-title i {
+    display: inline-block;
+    float: left;
+    width: 4px;
+    height: 25px;
+    background: #46b8da;
+    margin: 0 12px 0 3px
+}
+
+.register-form {
+    width: 460px;
+    padding: 2px 0;
+    margin: 0 auto;
+    color: #4d4d4e
+}
+
+.register-form .form-group {
+    position: relative;
+    margin-top: 4px;
+    margin-bottom: 0
+}
+
+.register-form .form-group>span {
+    line-height: 30px;
+    font-size: 14px
+}
+
+.register-form .form-label {
+    width: 120px
+}
+
+.register-form .form-label b {
+    font-size: 18px
+}
+
+.register-form .form-control {
+    width: 282px
+}
+
+.register-form .verify-input {
+    width: 132px
+}
+
+.register-form .verify-img {
+    float: left;
+    width: 90px;
+    height: 30px;
+    margin: 0 10px 0 18px;
+    cursor: pointer
+}
+
+.register-form .verify-btn {
+    float: left;
+    line-height: 30px;
+    font-size: 12px;
+    color: #00abe3;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.register-form .help-block {
+    margin: 10px 0 0 136px
+}
+
+.register-content .btn-submit {
+    width: 282px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background: #46b8da
+}
+
+.register-content .btn-submit:hover {
+    background: #34a6c8
+}
+
+.register-form .avatar-img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%
+}
+
+.register-form .avatar-tips {
+    float: left;
+    width: 220px;
+    line-height: 1.6;
+    padding: 10px 8px;
+    margin-left: 15px;
+    color: #4d4d4e;
+    font-size: 12px;
+    background-color: #fcf4d7
+}
+
+.register-form .avatar-file {
+    position: absolute;
+    left: 135px;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: 100
+}
+
+.register-form .btn-upload {
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+    background: #5dc5a7;
+    position: relative;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.register-form .loading {
+    position: absolute;
+    top: 30px;
+    left: 165px;
+    width: 20px;
+    height: 20px
+}
+
+.register-form .typelist,.register-form .city_select {
+    float: left;
+    width: 300px
+}
+
+.register-form .typelist label {
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer
+}
+
+.register-form .typelist input[type='radio'] {
+    width: 30px
+}
+
+.register-form .city_select select {
+    width: 90px;
+    height: 30px
+}
+
+.account-tip {
+    margin: 10px 0 0 0;
+    text-align: center
+}
+
+.register-approval-tip {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #4d4d4e;
+    text-align: center
+}
+
+/*modal 第三方平台选择*/
+.logo-box {
+    text-align:center;
+}
+
+.img-box img {
+    width: 70px;
+    height: 70px;
+
+}
+
+.tp-selected {
+    border-radius: 2px;
+    border:2px solid #5dc5a7;
+}

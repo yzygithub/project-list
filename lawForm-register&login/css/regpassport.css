@@ -1,0 +1,227 @@
+@charset "utf-8";
+/* CSS Document */
+.container-logo {
+    width:1024px;
+    margin: 0 auto;
+}
+
+.logo > img {
+    width: 300px;
+    height: 60px;
+    margin-top: 5px;
+    margin-left: 40px;
+}
+
+.register-body {
+    font-family: arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    background-color: #f4f4f4;
+}
+
+.register-body > div {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.register-progress {
+    height: 76px;
+}
+
+.register-progress li {
+    float: left;
+    position: relative;
+    width: 313px;
+    height: 36px;
+    line-height: 36px;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #ddd;
+}
+
+.register-progress li:not(:last-child):before {
+    position: absolute;
+    z-index: 3;
+    content: '';
+    right: -20px;
+    bottom: 0;
+    border-left: 18px dashed #fff;
+    border-top: 18px dashed transparent;
+    border-bottom: 18px dashed transparent;
+}
+
+.register-progress li:not(:last-child):after {
+    position: absolute;
+    z-index: 4;
+    content: '';
+    right: -18px;
+    bottom: 0;
+    border-left: 18px dashed #ddd;
+    border-top: 18px dashed transparent;
+    border-bottom: 18px dashed transparent;
+}
+
+.register-progress li.active:not(:last-child):after {
+    border-left-color: #99c969;
+}
+
+.register-progress li > span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 15px;
+    border-radius: 50%;
+    color: #4d4d4e;
+    background-color: #fff;
+}
+
+.register-progress li.active {
+    background-color: #99c969;
+    color: #fff;
+}
+
+.register-content {
+    padding: 0 20px;
+    background-color: #fff;
+}
+
+.register-header {
+    line-height: 25px;
+    padding: 24px 0 16px;
+    margin-bottom: 10px;
+    color: #4d4d4e;
+    font-size: 18px;
+    border-bottom: 1px solid #c9c9ca;
+}
+
+.register-header > i {
+    display: inline-block;
+    float: left;
+    width: 4px;
+    height: 25px;
+    background: #61c4a7;
+    margin: 0 12px 0 3px;
+}
+
+.register-form {
+    width: 460px;
+    padding: 20px 0;
+    margin: 0 auto;
+    color: #4d4d4e;
+}
+
+.register-form .form-group {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.register-form .form-group > label {
+    float: left;
+    display: block;
+    width: 106px;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 16px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: right;
+}
+
+.register-form .form-group > input {
+    float: left;
+    width: 282px;
+}
+
+.register-form .form-group > input.sm {
+    width: 132px;
+}
+
+.register-form .form-group > input.form-control {
+    height: 30px;
+    border-radius: 0;
+}
+
+.register-form .form-group > input.btn-info {
+    margin-top: 20px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.register-form .form-group > .ver-img {
+    float: left;
+    width: 90px;
+    height: 30px;
+    margin: 0 10px 0 18px;
+    cursor: pointer;
+}
+
+.register-form .form-group > .ver-btn {
+    float: left;
+    line-height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.register-form .form-group > .help-block {
+    display: block;
+    width: 282px;
+    line-height: 30px;
+    margin: 0 0 0 106px;
+}
+
+/*密码强度*/
+.pw-strength {
+    clear: both;
+    position: relative;
+    left: 106px;
+    top: 8px;
+    width: 180px
+}
+
+.pw-txt {
+    padding-top: 2px;
+    height: 26px;
+    width: 180px;
+    overflow: hidden
+}
+
+.pw-txt span {
+    color: #707070;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    width: 58px
+}
+
+.pw-bar,
+.pw-bar-on {
+    background: url(../img/pw_bar.png) no-repeat;
+    height: 14px;
+    overflow: hidden;
+    width: 176px
+}
+
+.pw-bar-on {
+    background-position: 0 -14px;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width .5s ease-in;
+    -moz-transition: width .5s ease-in;
+    -webkit-transition: width .5s ease-in;
+    -o-transition: width .5s ease-in
+}
+
+.pw-weak .pw-bar-on {
+    width: 60px
+}
+
+.pw-medium .pw-bar-on {
+    width: 120px
+}
+
+.pw-strong .pw-bar-on {
+    width: 172px
+}

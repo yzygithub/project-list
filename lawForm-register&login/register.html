@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>律师注册-宝盈律师网</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="宝盈律师事务所">
+	<meta name="description" content="宝盈律师事务所">
+  <link href="css/regcommon.css" rel="stylesheet">
+  <link href="css/regpassport.css" rel="stylesheet">
+  <script src="scripts/jquery.min.js"></script>
+  <script type="text/javascript">
+    var userData = 0;
+  </script>
+  <script src="scripts/jquery.validate.js"></script>
+  <script src="scripts/ch.validate.js"></script>
+</head>
+
+<body>
+	<!-- 顶部导航栏 -->
+	<div class="container-static">
+    <div class="container-logo">
+      <a class="logo" href="#">
+        <img src="img/LOGO.jpg">
+      </a>
+    </div>
+	</div>
+	<!-- 注册 -->
+	<div class="container-static register-body">
+		<!-- 进度条 -->
+		<div class="register-progress">
+			<ul>
+				<li class="active"><span>1</span>注册一个律师帐号</li>
+				<li><span>2</span>填写加盟申请信息</li>
+				<li><span>3</span>提交申请，等待审核</li>
+			</ul>
+		</div>
+		<!-- 注册信息 -->
+		<div class="register-content">
+			<div class="register-header">
+				<i></i>基本信息
+			</div>
+			<form id="reg_form" class="register-form" role="form" method="post" novalidate="novalidate">
+				<div class="form-group">
+					<label>手机：</label>
+					<input class="form-control" name="mobile" type="text">
+				</div>
+				<div class="form-group">
+					<label>验证码：</label>
+					<input class="form-control sm" name="captcha" type="text">
+					<img class="ver-img" ch-captcha="pic" captcha-id="reg" src="/captcha/pic/id/reg" title="点击刷新验证码" style="cursor: pointer;">
+					<a class="ver-btn" onclick="$(this).prev().click();">看不清？</a>
+				</div>
+				<div class="form-group">
+					<label></label>
+					<button id="btn_send_sms" class="btn btn-default" type="button">获取短信验证码</button>
+				</div>
+				<div class="form-group">
+					<label>短信验证码：</label>
+					<input class="form-control" name="smsCode" type="text">
+				</div>
+				<div class="form-group">
+					<label>请设置密码：</label>
+					<input class="form-control" id="pass" name="password" type="password">
+					<!--密码强度-->
+          <div class="pw-strength " id="level">
+            <div class="pw-bar"></div>
+            <div class="pw-bar-on"></div>
+            <div class="pw-txt clearfix">
+              <span>危险</span>
+              <span>一般</span>
+              <span>安全</span>
+            </div>
+          </div>
+				</div>
+				<div class="form-group">
+					<label>请确认密码：</label>
+					<input class="form-control" name="repassword" type="password">
+				</div>
+				<div class="form-group">
+					<label></label>
+					<input class="btn btn-info" type="submit" value="立即注册">
+				</div>
+			</form>
+		</div>
+		<!--footer-->
+		<div class="container-static f-footer">
+			<p>
+				<a href="#" target="_blank">关于宝盈</a>
+				<span>|</span>
+				<a href="#">移动应用</a>
+				<span>|</span>
+				<a href="#">商务合作</a>
+				<span>|</span>
+				<a href="#">客服中心</a>
+				<span>|</span>
+				<a href="#" target="_blank">用户协议</a>
+				<span>|</span>
+				<a href="#" target="_blank">律秘通道</a>
+			</p>
+			<p>
+				<span>Copyright</span>
+				<span>©</span>
+				<span>2017-20XX</span>
+				<span>xxxx</span>
+				<span>All Right Reserved.</span>
+				<a href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备xxxx</a>
+			</p>
+		</div>
+		<!--footer end-->
+	</div>
+  <script>
+    //密码强度验证脚本
+    $(document).ready(function () {
+      $('#pass').keyup(function () {
+        var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+        var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+        var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+
+        if (false == enoughRegex.test($(this).val())) {
+          $('#level').removeClass('pw-weak');
+          $('#level').removeClass('pw-medium');
+          $('#level').removeClass('pw-strong');
+          $('#level').addClass(' pw-defule');
+          //密码小于六位的时候，密码强度图片都为灰色
+        }
+        else if (strongRegex.test($(this).val())) {
+          $('#level').removeClass('pw-weak');
+          $('#level').removeClass('pw-medium');
+          $('#level').removeClass('pw-strong');
+          $('#level').addClass(' pw-strong');
+          //密码为八位及以上并且字母数字特殊字符三项都包括,强度最强
+        }
+        else if (mediumRegex.test($(this).val())) {
+          $('#level').removeClass('pw-weak');
+          $('#level').removeClass('pw-medium');
+          $('#level').removeClass('pw-strong');
+          $('#level').addClass(' pw-medium');
+          //密码为七位及以上并且字母、数字、特殊字符三项中有两项，强度是中等
+        }
+        else {
+          $('#level').removeClass('pw-weak');
+          $('#level').removeClass('pw-medium');
+          $('#level').removeClass('pw-strong');
+          $('#level').addClass('pw-weak');
+          //如果密码为6为及以下，就算字母、数字、特殊字符三项都包括，强度也是弱的
+        }
+        return true;
+      });
+    });
+
+  </script>
+  <script type="text/javascript">
+	$(function() {
+		// 手机注册表单验证
+		var register_validate = $("#reg_form").validate({
+			onkeyup: false,
+			ignore: "",
+			errorClass: "has-error",
+			errorElement: "span",
+			errorPlacement: function(error, element) {
+				element.parent().append(error.addClass("help-block"));
+			},
+			rules: {
+				mobile: {
+					required: true,
+					mobile: true,
+					remote: {
+						type: 'post',
+						url: '/verify/query?not=1',
+						data: {
+							field: function() {
+								return 'mobile';
+							},
+							value: function() {
+								return $("[name='mobile']").val();
+							},
+						},
+						dataType: 'json',
+					}
+				},
+				captcha: {
+					required: true,
+					remote: {
+						type: 'post',
+						url: '/captcha/pic_check',
+						data: {
+							id: function() {
+								return $("[ch-captcha='pic']").attr('captcha-id');
+							},
+							code: function() {
+								return $("[name='captcha']").val();
+							},
+						},
+						dataType: 'json',
+					}
+				},
+				smsCode: {
+					required: true,
+				},
+				password: {
+					required: true,
+					upassword: true,
+				},
+				repassword: {
+					required: true,
+					upassword: true,
+					equalTo: "[name='password']"
+				}
+			},
+			messages: {
+				mobile: {
+					required: "请输入您的手机号码",
+					remote: "该号码已被使用",
+				},
+				captcha: {
+					required: "请输入验证码",
+					remote: "验证码错误",
+				},
+				smsCode: "请输入手机验证码",
+				password: {
+					required: "请输入密码",
+				},
+				repassword: {
+					required: "请再次输入密码",
+					equalTo: "两次输入的密码不一致"
+				},
+			},
+			submitHandler: function() {
+				var btn_submit = $("#reg_form [type='submit']");
+				btn_submit.attr('disabled', true).val('提交中...');
+				$.ajax({
+					type: 'post',
+					url: '',
+					data: $("#reg_form").serialize(),
+					success: function(d) {
+						if (d.error == 0) { // 注册成功
+							$.iDialog({
+								mode: 0,
+								content: "恭喜你注册成功",
+								close: function() {
+									location.href = d.url;
+								}
+							});
+						} else {
+							$.iDialog({
+								icon: 2,
+								content: d.msg,
+							});
+							btn_submit.attr('disabled', false).val('立即注册');
+						}
+					},
+					dataType: 'json',
+				});
+			}
+		});
+		$("#btn_send_sms").click(function() {
+			var self = this;
+			$.sendSms({
+				mobile: $("[name='mobile']").val(),
+				method: 'USER_REGISTER',
+				product: '宝盈律师网律师',
+				verify: function() {
+					return register_validate.element("[name='mobile']") && register_validate.element("[name='captcha']");
+				},
+				success: function() {
+					$(self).iCountdown({
+						mode: 0
+					});
+				},
+				failed: function(e) {
+					$.iDialog({
+						icon: 2,
+						content: e
+					});
+				}
+			});
+		});
+	});
+	</script>
+</body>
+
+</html>

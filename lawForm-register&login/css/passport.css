@@ -1,0 +1,377 @@
+@charset "utf-8"; 
+body {
+    font: 12px/18px "Microsoft Yahei",Tahoma,Helvetica,Arial,Verdana,"\5b8b\4f53",sans-serif
+}
+
+.register-header {
+    position: relative;
+    height: 323px;
+    background-color: #f1f2f6
+}
+
+.register-header>.logo {
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    left: 100px;
+    display: inline-block;
+    width: 400px;
+    height: 80px;
+    background: url("../img/LOGO.jpg") left top no-repeat;
+    background-size: 400px 80px
+}
+
+.register-box {
+    position: relative;
+    z-index: 1;
+    width: 660px;
+    margin: -150px auto 0 auto;
+    padding: 50px 47px 60px 57px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0,0,0,.09);
+    display: table;
+    font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica
+}
+
+.register-box-left {
+    width: 300px;
+    margin-right: 46px;
+    float: left;
+    clear: both
+}
+
+.register-form-header {
+    position: relative;
+    height: 33px;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+    border-bottom: 1px solid #ebebeb
+}
+
+.register-form-header li {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 33px;
+    line-height: 24px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 29px
+}
+
+.register-form-header li.active {
+    color: #38f
+}
+
+.register-form-body {
+    display: none
+}
+
+.register-form-body.active {
+    display: block
+}
+
+.register-form-body input {
+    border-radius: 0
+}
+
+.register-form-body input.form-control {
+    float: left;
+    width: 300px;
+    height: 46px;
+    line-height: 1.3333333;
+    padding: 10px 16px;
+    font-size: 14px;
+    background-color: #f8f8f8
+}
+
+.register-form-body input.input-verify {
+    width: 200px
+}
+
+.register-form-body .form-group {
+    margin-bottom: 20px
+}
+
+.register-form-body .form-group a.btn {
+    width: 100px;
+    height: 46px;
+    line-height: 46px;
+    padding: 0;
+    font-size: 12px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0
+}
+
+.register-form-body .form-group img {
+    width: 100px;
+    height: 46px;
+    cursor: pointer
+}
+
+.register-box-divider {
+    float: left
+}
+
+.register-box-right {
+    float: left;
+    width: 156px;
+    margin-left: 40px
+}
+
+.register-box-right p~p {
+    margin: 30px 0 0 0
+}
+
+.vender-login {
+    float: left;
+    padding: 0;
+    margin-top: 10px;
+    list-style: none
+}
+
+.vender-login li {
+    float: left
+}
+
+.vender-login li:not(:last-child) {
+    margin-right: 10px
+}
+
+.qrcode {
+    float: left;
+    margin-top: 45px
+}
+
+.qrcode img {
+    width: 124px;
+    height: 124px;
+    margin-left: 6px;
+    margin-bottom: 5px
+}
+
+.qrcode p {
+    font-size: 12px
+}
+
+.qq-register {
+    padding: 25px;
+    color: #666
+}
+
+.qq-register-header {
+    margin: 10px 0 20px 100px
+}
+
+.qq-register-header>.icon {
+    float: left;
+    border: 2px solid silver;
+    border-radius: 6px
+}
+
+.qq-register-info {
+    display: inline-block;
+    padding-left: 20px
+}
+
+.qq-register-info>.nickname {
+    height: 34px;
+    line-height: 34px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700
+}
+
+.qq-register-info>.tip {
+    margin-top: 4px;
+    font-size: 16px
+}
+
+.qq-register-well {
+    padding: 24px;
+    border: 1px solid silver;
+    border-radius: 6px
+}
+
+.qq-register-well+.qq-register-well {
+    margin-top: 20px
+}
+
+.qq-register-title {
+    padding: 0 15px 10px 5px;
+    border-bottom: 1px dashed #ccc;
+    cursor: pointer
+}
+
+.qq-register-title>h4 {
+    margin: 10px 0;
+    color: #38f
+}
+
+.qq-register-body {
+    display: none;
+    padding: 30px 60px;
+    box-shadow: 0 0 5px rgba(0,0,0,.09);
+    border-radius: 3px
+}
+
+.qq-register-body.active {
+    display: block
+}
+
+.qq-register-body .form-group {
+    margin-bottom: 20px
+}
+
+.qq-register-body input {
+    border-radius: 2px
+}
+
+.qq-register-body .form-control {
+    font-size: 14px;
+    background-color: #f8f8f8
+}
+
+.qq-register-body .help-block {
+    margin-left: 5px;
+    margin-bottom: 0
+}
+
+.findpswd {
+    width: 700px
+}
+
+.p-nav {
+    position: relative;
+    height: 120px;
+    background: #fff
+}
+
+.p-caption {
+    height: 55px;
+    font-size: 18px;
+    text-align: center
+}
+
+.p-caption span {
+    width: 145px;
+    margin-top: 25px;
+    display: inline-block
+}
+
+.p-progress {
+    height: 50px;
+    margin: 0 auto;
+    font-size: 14pt;
+    color: #fff;
+    background: url("../img/contract_nav_bg.png") no-repeat;
+    width: 492px
+}
+
+.p-progress .item {
+    float: left;
+    display: inline-block;
+    margin-top: 5px;
+    background: url("../img/contract_nav_bg.png") no-repeat;
+    background-position: 6px -91px
+}
+
+.p-progress .item.active {
+    background-position: 6px -52px
+}
+
+.p-progress .item:not(:last-child) {
+    width: 150px
+}
+
+.p-progress .item:last-child {
+    width: 40px
+}
+
+.p-progress .item span {
+    display: inline-block;
+    line-height: 32px;
+    margin-left: 15px
+}
+
+.p-progress .line {
+    width: 107px;
+    height: 8px;
+    line-height: 32px;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-left: 11px
+}
+
+.p-progress .line.in {
+    background: #bed5eb
+}
+
+.p-progress .line.out {
+    background: #3a85c9
+}
+
+.p-content {
+    width: 400px;
+    margin: 10px auto
+}
+
+.p-content label.control-label {
+    width: 80px;
+    padding-top: 10px
+}
+
+.p-content label>b {
+    color: red
+}
+
+.p-content button,.p-content input {
+    height: 45px
+}
+
+.p-content input.form-control {
+    display: inline-block;
+    float: right
+}
+
+.p-content input.btn {
+    margin-top: 30px
+}
+
+.p-content .form-group img {
+    width: 100px;
+    height: 43px;
+    float: right;
+    cursor: pointer
+}
+
+.p-content label+input.form-control {
+    width: 320px
+}
+
+.p-content img+input.form-control {
+    width: 220px
+}
+
+.p-content label+button {
+    width: 100px;
+    font-size: 10px;
+    float: right
+}
+
+.p-content button+input {
+    width: 220px
+}
+
+.p-content label+p {
+    display: inline-block;
+    width: 320px;
+    font-size: 18px;
+    line-height: 40px;
+    margin: 0;
+    float: right
+}

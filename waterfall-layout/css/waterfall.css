@@ -1,0 +1,185 @@
+html body {
+    margin: 0;
+    width: auto;
+    font-size: 12px;
+    background: #fff;
+}
+
+body {
+    line-height: 1.5;
+    background: #f0f0f0;
+}
+
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, b, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/*search head start*/
+#search {
+    position: relative;
+    z-index: 35;
+    background-color: #fff;
+    border-bottom: 0;
+    box-shadow: none;
+    min-width: 1220px;
+    display: inline-block;
+    min-height: 90px;
+    width: 100%;
+    padding-bottom: 0;
+    vertical-align: bottom;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+/*s_search*/
+#search .s_search {
+    position: fixed;
+    top: 0;
+    min-width: 1000px;
+    width: 100%;
+    height: 55px;
+    z-index: 9;
+    background: #fff;
+}
+
+.s_search {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.s_search .s_logo {
+    position: absolute;
+    top: 0;
+    float: initial;
+    width: 101px;
+    height: 35px;
+    margin: 8px 10px 0;
+}
+
+#search .s_search .s_nav {
+    position: absolute;
+    z-index: 7;
+    left: 121px;
+    float: initial;
+    margin-top: 11px;
+}
+
+.s_search .s_logo img {
+    top: 0;
+    width: 101px;
+    height: 34px;
+    display: block;
+    position: relative;
+    z-index: 9;
+    border: 0;
+}
+#search .searchform {
+    padding-right: 0!important;
+}
+#search form {
+    position: relative;
+}
+#search form .s_ipt_wr {
+    display: inline-block;
+    width: 540px;
+    height: 34px;
+    box-sizing: border-box;
+    border: 1px solid #b8b8b8;
+    border-right: 0;
+    border-bottom: 1px solid #ccc;
+    vertical-align: top;
+}
+#search form .s_btn_wr {
+    display: inline-block;
+    z-index: 0;
+    width: 100px;
+    height: 34px;
+    vertical-align: top;
+}
+
+#search form .s_ipt_wr .s_ipt {
+    width: 494px;
+    height: 22px;
+    font: 16px/22px arial;
+    margin: 6px 0 0 7px;
+    outline: 0;
+    background: #fff;
+}
+
+#search form .s_ipt_wr input, #search form .s_btn_wr input {
+    padding: 0;
+    border: 0;
+}
+
+#search form .s_btn_wr .s_btn {
+    width: 100px;
+    height: 34px;
+    border-left: 0;
+    padding: 0;
+    line-height: 34px;
+    font-size: 14px;
+    font-family: Arial;
+    background: #38f;
+    color: #fff;
+    border: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #2d78f4;
+    cursor: pointer;
+}
+
+/*s_tab*/
+.s_tab {
+    position: relative;
+    z-index: 6;
+    margin: 0;
+    font-size: 0;
+    padding: 55px 0 0 121px;
+    background: #f8f8f8;
+    height: 38px;
+    line-height: 36px;
+    overflow: hidden;
+}
+.s_tab b, .s_tab a {
+    display: inline-block;
+    font-family: Arial;
+    font-size: 14px;
+    color: #555;
+    width: 54px;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.s_tab b {
+    color: #333;
+    font-weight: 700;
+    border-bottom: 2px #38f solid;
+}
+/*search head end*/
+
+/*img content*/
+html body #imgContainer {
+    padding: 0 18px;
+    background: #fff;
+}
+#container {
+    min-height: 400px;
+    position: relative;//防止第二排图片上移
+}
+.box{
+    position: relative;
+    float: left;
+}
+.content{
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+}
+.content img{
+    width: 285px;
+    height: auto;
+}

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>律师加盟-宝盈律师事务所</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="宝盈律师事务所">
+	<meta name="description" content="宝盈律师事务所">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/regcommon.css" rel="stylesheet">
+	<script src="scripts/jquery.min.js"></script>
+	<script type="text/javascript">
+	var userData = {
+		"mobile": "xxxxxxxx",
+		"status": "1",
+		"name": "",
+		"avatar": ""
+	};
+	</script>
+	<link href="css/register.css" rel="stylesheet">
+	<script src="scripts/jquery.validate.js"></script>
+	<script src="scripts/ch.validate.js"></script>
+	<script src="scripts/ch.cityselect.js"></script>
+	<style>
+	.register-form {
+		width: 100%;
+	}
+	
+	.register-form .form-label {
+		width: 300px;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="container-static register-header">
+		<div class="register-header-content">
+			<a href="#">
+				<img class="logo" src="img/LOGO.jpg">
+			</a>
+			<a class="logout" href="/logout">退出</a>
+		</div>
+	</div>
+	<div class="container-static register-body">
+		<!-- 进度条 -->
+		<div class="register-process clearfix">
+			<ul>
+				<li class="active"><b>1</b>注册一个律师帐号</li>
+				<li class="active"><b>2</b>填写加盟申请信息</li>
+				<li><b>3</b>提交申请，等待审核</li>
+			</ul>
+		</div>
+		<div class="register-content">
+			<form id="join_form" class="horizontal-form" method="post" novalidate="novalidate">
+				<div class="register-title"><i></i>基本信息</div>
+				<div class="register-form">
+					<div class="form-group">
+						<label class="form-label">手机号：</label>
+						<span style="line-height:30px;font-size:14px;">xxxxxxxxxx</span>
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>姓名：</label>
+						<input class="form-control" name="realname" value="" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>性别：</label>
+						<div class="typelist">
+							<label style="width:60px;">
+								<input type="radio" name="sex" value="M" checked="checked">男
+							</label>
+							<label>
+								<input type="radio" name="sex" value="F">女
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-label">座机：</label>
+						<input class="form-control" name="telephone" value="" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>QQ：</label>
+						<input class="form-control" name="qq" value="" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>邮箱：</label>
+						<input class="form-control" name="email" value="" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label">头像：</label>
+						<img id="avatar_view" class="avatar-img" src="img/avatar_default.png">
+						<div class="avatar-tips">
+							<p>图片要求：</p>
+							<p>1.格式为png或jpg，大小不超过3M；</p>
+							<p>2.正面头像照，轮廓清晰；</p>
+							<p>3.最好是职业照，不宜太生活化；</p>
+							<p>4.表情微笑，给客户一个阳光的感觉；</p>
+						</div>
+						<input name="avatar_mark" style="width:0;filter:alpha(opacity=0);opacity:0;" value="" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label"></label>
+						<input type="file" class="avatar-file" style="left:315px;" id="avatar_file" name="avatar_file" accept="image/jpg,image/jpeg,image/png">
+						<a class="btn btn-upload">上传</a>
+					</div>
+					<div class="form-group">
+						<label class="form-label">选择第三方平台：</label>
+            <img id="third_party_icon" style="float:left;margin-right:20px;width:100px;height:100px;border-radius:4px;" src="img/img_default.png">
+					</div>
+          <div class="form-group">
+            <label class="form-label"></label>
+            <a class="btn btn-upload" id="choose">选择</a>
+          </div>
+        </div>
+				<div class="register-title"><i></i>认证信息</div>
+				<div class="register-form">
+					<div class="form-group">
+						<label class="form-label"><b>*</b>身份证号：</label>
+						<input class="form-control" name="idcard" value="" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>身份证照片：</label>
+						<img id="idcard_front_view" style="float:left;margin-right:20px;width:120px;height:90px;border-radius:4px;" src="img/img_default.png">
+						<input name="idcard_front_mark" style="width:0;filter:alpha(opacity=0);opacity:0;" value="" type="text">
+						<img id="idcard_back_view" style="float:left;width:120px;height:90px;border-radius:4px;" src="img/img_default.png">
+						<input name="idcard_back_mark" style="width:0;filter:alpha(opacity=0);opacity:0;" value="" type="text">
+						<div class="avatar-tips">
+							<p>图片要求：</p>
+							<p>1.格式为png或jpg，大小不超过3M；</p>
+							<p>2.能清晰看到姓名、身份证号码等信息；</p>
+						</div>
+					</div>
+					<div style="clear:both;"></div>
+					<div class="form-group">
+						<label class="form-label"></label>
+						<input type="file" class="avatar-file" style="left:315px;" id="idcard_front_file" name="idcard_front_file" accept="image/jpg,image/jpeg,image/png">
+						<a class="btn btn-upload" style="margin-right:20px;">上传身份证正面照</a>
+						<input type="file" class="avatar-file" style="left:460px;" id="idcard_back_file" name="idcard_back_file"  accept="image/jpg,image/jpeg,image/png">
+						<a class="btn btn-upload">上传身份证背面照</a>
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>执业证号：</label>
+						<input class="form-control" name="number" value="" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>执业机构：</label>
+						<input class="form-control" name="office" value="" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>从业开始时间：</label>
+						<input class="form-control" name="start_time" value="1970-01-01" placeholder="示例：2010-6-6" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>执业资质照片：</label>
+						<img id="professional_view" style="float:left;margin-right:20px;width:120px;height:90px;border-radius:4px;" src="img/img_default.png">
+						<input name="professional_mark" style="width:0;filter:alpha(opacity=0);opacity:0;" value="" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label"></label>
+						<input type="file" class="avatar-file" style="left:315px;" id="professional_file" name="professional_file"  accept="image/jpg,image/jpeg,image/png">
+						<a class="btn btn-upload" style="margin-right:20px;">上传执业资质照片</a>
+					</div>
+				</div>
+				<div class="register-title"><i></i>服务信息</div>
+				<div class="register-form">
+					<div class="form-group">
+						<label class="form-label"><b>*</b>收件地址：</label>
+						<div id="city_select" class="city_select">
+							<select name="prov" >
+								<option value="">选择省份</option>
+								<option value="11">北京市</option>
+								<option value="31">上海市</option>
+								<option value="32">江苏省</option>
+								<option value="33">浙江省</option>
+								<option value="44">广东省</option>
+							</select>
+							<select name="city">
+								<option value="">选择市</option>
+							</select>
+							<select name="dist">
+								<option value="">选择区</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-label"></label>
+						<input class="form-control" name="address" type="text" placeholder="请输入详细地址">
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>服务简介：</label>
+						<textarea class="form-control" name="intro" style="resize:none;height:100px;"></textarea>
+					</div>
+				</div>
+				<div class="register-title"><i></i>财务信息</div>
+				<div class="register-form">
+					<div class="form-group">
+						<label class="form-label"><b>*</b>银行账户类型:</label>
+						<div class="typelist">
+							<label>
+								<input type="radio" name="account_type" value="1" checked="">单位账户
+							</label>
+							<label>
+								<input type="radio" name="account_type" value="2" checked="checked">个人账户
+							</label>
+						</div>
+					</div>
+					<div class="account-tip" style="display:none;">说明：个人账户在结算时，需要按照法律规定缴纳个人所得税。</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>银行账号：</label>
+						<input class="form-control" name="account_number" value="" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>开户行：</label>
+						<input class="form-control" name="account_bank" value="" type="text">
+					</div>
+					<div class="form-group">
+						<label class="form-label"><b>*</b>户主姓名：</label>
+						<input class="form-control" name="account_holder" value="" type="text">
+					</div>
+				</div>
+				<div class="register-title"></div>
+				<div class="register-form">
+					<div class="form-group">
+						<label class="form-label"></label>
+						<input class="btn btn-submit" type="submit" value="提交申请">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--footer-->
+	<div class="container-static f-footer">
+		<p>
+			<a href="#" target="_blank">关于宝盈</a>
+			<span>|</span>
+			<a href="#">移动应用</a>
+			<span>|</span>
+			<a href="#">商务合作</a>
+			<span>|</span>
+			<a href="#">客服中心</a>
+			<span>|</span>
+			<a href="#" target="_blank">用户协议</a>
+			<span>|</span>
+			<a href="#" target="_blank">律秘通道</a>
+		</p>
+		<p>
+			<span>Copyright</span>
+			<span>©</span>
+			<span>2017-20xx</span>
+			<span>xx信息科技</span>
+			<span>All Right Reserved.</span>
+			<a href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备xxx</a>
+		</p>
+	</div>
+	<!--footer end-->
+	<!-- Modal 第三方平台-->
+	<div class="modal fade" id="third_party_choose" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+					<h4 class="modal-title" id="myModalLabel">选择第三方平台</h4>
+				</div>
+				<div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img class=" tp-selected" src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <div class="logo-box">
+                  <div class="img-box">
+                    <img src="img/avatar_default.png" alt="第三方logo">
+                  </div>
+                  <p>xxxxx</p>
+                </div>
+              </div>
+            </div>
+          </div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary" id="confirm_choose" style="background-color: #5dc5a7">确认</button>
+				</div>
+			</div>
+		</div>
+	</div>
+  <script>
+    $(document).ready(function () {
+//      modal 第三方平台
+      $('#choose').click(function () {
+        $('#third_party_choose').modal('show');
+      });
+      $('#confirm_choose').click(function () {
+        var imgsrc = $('.tp-selected').attr('src');
+        $('#third_party_icon').attr('src',imgsrc);
+        $('#third_party_choose').modal('hide');//调试用
+        $.ajax({
+          url:'./server/xxx.php',
+          type:'post',
+          data:{xx:xx},
+          success:function () {
+            $('#third_party_choose').modal('hide');
+          }
+        });
+      });
+//      第三方logo选中效果
+      $('.img-box img').click(function () {
+        $('.tp-selected').removeClass('tp-selected');
+        $(this).addClass('tp-selected');
+      });
+//		上传按钮trigger('click')
+			$('.btn-upload').click(function () {
+        $(this).prev().trigger('click');
+      });
+    });
+  </script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		// 初始化
+		$("[name='sex']").filter("[value='M']").attr('checked', true);
+		$("#city_select").iCitySelect({
+			initValue: ""
+		});
+		$("[name='address']").val(''.replace('', ''));
+		$("[name='account_type']").eq(0 - 1).attr('checked', true);
+
+		$("[name='account_type']").change(function() {
+			if (2 == $(this).val()) {
+				$(".account-tip").show()
+			} else {
+				$(".account-tip").hide();
+			}
+		});
+
+		// 表单验证
+		var join_validate = $("#join_form").validate({
+			onkeyup: false,
+			ignore: "",
+			errorClass: "has-error",
+			errorElement: "span",
+			errorPlacement: function(error, element) {
+				if (element.attr('name') == 'idcard_front_mark') {
+					element.parents(".form-group").after(error.css({
+						'margin-top': '10px',
+						'float': 'left',
+						'margin-left': '315px'
+					}));
+				} else if (element.attr('name') == 'idcard_back_mark') {
+					element.parents(".form-group").after(error.css({
+						'margin-top': '10px',
+						'margin-right': '335px',
+						'width': 'auto',
+						'float': 'right'
+					}));
+				} else {
+					element.parents(".form-group").after(error.addClass("help-block").css('margin-left', '315px'));
+				}
+			},
+			rules: {
+				realname: 'required',
+				sex: 'required',
+				qq: {
+					required: true,
+					minlength: 5,
+					maxlength: 11,
+					digits: true
+				},
+				email: {
+					required: true,
+					email: true,
+				},
+				avatar_mark: 'required',
+				idcard: {
+					required: true,
+					idNumber: true,
+				},
+				idcard_back_mark: 'required',
+				idcard_front_mark: 'required',
+				number: {
+					required: true,
+					practiceNumber: true,
+				},
+				start_time: 'required',
+				professional_mark: 'required',
+				dist: 'required',
+				address: 'required',
+				intro: 'required',
+				account_number: {
+					required: true,
+					minlength: 12,
+					maxlength: 19,
+					digits: true
+				},
+				account_bank: 'required',
+				account_holder: 'required',
+			},
+			messages: {
+				realname: '请输入您的真实姓名',
+				sex: '请选择性别',
+				qq: {
+					required: "请输入QQ号",
+					minlength: "请输入正确的qq号",
+					maxlength: "请输入正确的qq号",
+					digits: "请输入正确的qq号"
+				},
+				email: {
+					required: "请输入邮箱地址",
+					email: "请输入正确的邮箱地址",
+				},
+				avatar_mark: '请上传头像',
+				idcard: {
+					required: '请输入身份证号',
+				},
+				idcard_front_mark: '请上传身份证正面照',
+				idcard_back_mark: '请上传身份证背面照',
+				number: {
+					required: '请输入执业证号',
+					practiceNumber: '执业证号格式不正确',
+				},
+				start_time: '请输入从业开始时间',
+				professional_mark: '请上传执业资质照片',
+				dist: '请选择地区',
+				address: '请输入详细地址',
+				intro: '请填写服务简介',
+				account_number: {
+					required: "请输入银行账号",
+					minlength: "请输入正确的银行账号",
+					maxlength: "请输入正确的银行账号",
+					digits: "请输入正确的银行账号",
+				},
+				account_bank: '请输入开户行',
+				account_holder: '请输入户主姓名',
+			},
+			submitHandler: function() {
+				$.ajax({
+					type: 'post',
+					url: '',
+					data: $("#join_form").serialize(),
+					success: function(d) {
+						if (d.error == 0) {
+							$.iDialog({
+								mode: 1,
+								content: '提交成功',
+								close: function() {
+									location.href = d.url;
+								}
+							});
+						} else {
+							$.iDialog({
+								icon: 2,
+								content: d.msg
+							});
+						}
+					},
+					dataType: 'json'
+				});
+			}
+		});
+	});
+	</script>
+</body>
+
+</html>
